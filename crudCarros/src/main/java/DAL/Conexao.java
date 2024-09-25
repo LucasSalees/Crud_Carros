@@ -5,6 +5,8 @@ package DAL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+//criação do banco de dados.
+
 /*
 create database crudCarros
 go 

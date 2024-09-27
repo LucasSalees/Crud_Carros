@@ -27,12 +27,11 @@ create table Carros
 select *from Carros
 */
 
-
 public class Conexao
 {
     public Connection con; 
     public String mensagem;
-    private String stringConexao = "jdbc:sqlserver://localhost\\LUCAS\\SQLEXPRESS:1433;databaseName=crudCarros;encrypt=false";
+    private String stringConexao = "jdbc:sqlserver://localhost\\LUCAS\\SQLEXPRESS:1433;databaseName=crudCarros;encrypt=false"; //Lembre-se: esse crud é de um local host, você precisa colocar o seu banco de dados para a apliação funcionar.
     
     public Connection conectar ()
     {
@@ -41,7 +40,7 @@ public class Conexao
         {
             if (con == null || con.isClosed())
             {
-                con = DriverManager.getConnection(stringConexao, "sa", "0421");
+                con = DriverManager.getConnection(stringConexao, "nome do seu banco", "sua senha");
             }
         } 
         catch (Exception e)
